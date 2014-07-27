@@ -6,7 +6,7 @@ To begin the analysis, we first load the required libraries and the CSV file int
 
 ```{r}
 library(lubridate)
-library(plyr)
+library(plyr, warn.conflicts = FALSE)
 library(ggplot2)
 activityData <- read.csv("activity.csv", colClasses = c("numeric", "Date", "numeric"))
 actiData <- na.omit(activityData)
